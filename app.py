@@ -8,7 +8,15 @@ from datetime import datetime
 from Visualizer import Visualizer
 from finance_engine import InventoryManager, CashFlowManager, FinancialAnalyzer, Sale, InventoryItem, save_sale
 
-st.html('<meta name="google-site-verification" content="CIAZXu0C3FeZ4TIzuwUCndmw7okvAxVh7Uzo3TGk7MA" />')
+import streamlit.components.v1 as components
+
+# This injects the verification tag into the app's rendered body
+components.html(
+    '<meta name="google-site-verification" content="CIAZXu0C3FeZ4TIzuwUCndmw7okvAxVh7Uzo3TGk7MA" />',
+    height=0
+)
+
+# Your existing code continues here...
 # ... (rest of the file until Operations Center)
 
 # Load the store salesdata
